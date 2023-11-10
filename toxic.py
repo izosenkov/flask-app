@@ -8,6 +8,8 @@ from nltk.tokenize import word_tokenize
 
 vectorizer, lr = load_models()
 
+nltk.download('punkt')
+nltk.download('wordnet')
 nltk.download('stopwords')
 
 stop_words = set(stopwords.words('russian'))
