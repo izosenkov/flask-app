@@ -11,5 +11,5 @@ def my_form():
 @app.route('/', methods=['POST'])
 def my_form_post():
     text = request.form['text']
-    processed_text = str(get_score(text))
+    processed_text = str(get_score(text) * 100)
     return render_template('form.html', level=processed_text)
